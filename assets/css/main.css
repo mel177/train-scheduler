@@ -19,7 +19,6 @@ table {
 }
 
 .jumbotron {
-    color: white;
-    background-color: rgb(red, green, blue);
+
     min-width: 800px;
 }
