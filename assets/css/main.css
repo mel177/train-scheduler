@@ -1,0 +1,25 @@
+.schedule-container {
+    min-width: 800px;
+}
+
+.input-container {
+    min-width: 800px;
+}
+
+body {
+    background: url('/assets/images/Trainstation.jpg')no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 6px;
+}
+
+.jumbotron {
+    color: white;
+    background-color: rgb(red, green, blue);
+    min-width: 800px;
+}
