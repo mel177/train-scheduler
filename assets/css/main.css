@@ -11,6 +11,11 @@ body {
     background-size: cover;
 
 }
+.form-inline{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
 
 
 table {
@@ -19,6 +24,7 @@ table {
 }
 
 .jumbotron {
-
+    color: white;
+    background-color:rgba(0,0,0,0.3); 
     min-width: 800px;
 }
