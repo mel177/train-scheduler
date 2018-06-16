@@ -50,11 +50,21 @@ trainData.ref().on("child_added",function(snapshot){
   var frequency = snapshot.val().frequency;
   var firstTrain = snapshot.val().fireTrain;
 
-  var remainder = moment().diff(moment.unix(firstTrain),"minutes")%frequency;
-  var minutes = frequency - remainder;
-  var arrival = moment().add(minutes).format("hh:mm A");
+  // Difference between the times
+  var diffTime = moment().diff(moment(firstTrain), "minutes");
+  console.log("DIFFERENCE IN TIME: " + diffTime);
 
-  console.log(remainder);
+  // Time apart (remainder) from class notes.... 
+  //this will tell us the differnce in time left from differnce in time and frequency of the train
+  var tRemainder = diffTime % frequency;
+  console.log(tRemainder);
+
+  // var remainder = moment().diff(moment.unix(firstTrain),"minutes")%frequency;
+  // var remainder 
+  var minutes = frequency - tRemainder;
+  var arrival = moment().add(parseInt(minutes, "m")).format("hh:mm A");
+
+  console.log(tRemainder);
   console.log(minutes);
   console.log(arrival);
 
